@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview</title>
+    <link rel="stylesheet" href="css-about.css">
+</head>
+<body>
+    <nav>
+        <div class="left">
+            <div class="logo"><a href="">Vangzbill.</a></div>
+        </div>
+        <div class="right" id="right">
+            <ul>
+                <li><a href = "index.html">HOME</a></li>
+                <li><a href = "">PRODUCT</a>
+                    <ul>
+                        <li><a class="div1" href = "#tuf15">TUF A 15</a></li>
+                        <li><a class="div2" href = "#duo16">ZHEPYRUS DUO 16</a></li>
+                        <li><a class="div3" href = "#g14">ZHEPYRUS G14</a></li>
+                        <li><a class="div4" href = "#strix15">STRIX G15</a></li>
+                    </ul>
+                </li>
+                <li><a class="link" id="link" onclick="pop()">LINK</a></li>
+            </ul>
+        </div>
+      </nav>
+
+    <div class="tuf15" id="tuf15">
+        <div class="judultuf">
+            <h1>TUF GAMING A15</h1>
+        </div>
+        <div class="pictuf">
+            <img src="img//download.png" alt="">
+        </div>
+        <div class="desc-tuf">
+            <p>Specs-wise, it's equipped with a 2.9 GHz AMD Ryzen 7 4800H eight-core processor, 16GB of DDR4 memory, a 512GB NVMe PCIe M. 2 SSD, and an NVIDIA GeForce GTX 1660 Ti graphics card. With these combined, the system will be able to quickly boot applications as well as run graphically demanding games.</p>
+        </div>
+    </div>
+
+    <div class="duo16" id="duo16">
+        <div class="judulzhep">
+            <h1>ZHEPYRUS DUO 16</h1>
+        </div>
+        <div class="piczhep">
+            <img src="img//zhep16.png" alt="">
+        </div>
+        <div class="desc-zhep">
+            <p> The Zephyrus Duo 16 is a very capable multi-purpose laptop and a computer more powerful and able to run cooler than the standard ROG models of this generation. However, the two displays are its most important selling point, and the main reason you're going to pay a hefty premium for this Duo 16 over standard designs with similar specs and capabilities. So make sure you want and need those two screens on your laptop.</p>
+        </div>
+    </div>
+
+    <div class="g14" id="g14">
+        <div class="judulg14">
+            <h1>ZHEPYRUS G 14</h1>
+        </div>
+        <div class="picg14">
+            <img src="img//g14p.png" alt="">
+        </div>
+        <div class="desc-g14">
+            <p> Enthusiast gamers and content creators demand outstanding performance in a thin and light gaming laptop. As an AMD Advantage™ system1, the ROG Zephyrus G14 gaming laptop gives you immersive visuals and blazing fast gaming with up to AMD Ryzen™ 9 6900HS processors and AMD Radeon™ RX 6800S graphics – all supercharged with AMD Smart technologies and packed into a remarkably compact chassis.</p>
+        </div>
+    </div>
+
+    <div class="strix15" id="strix15">
+        <div class="judulstrix15">
+            <h1>STRIX G 15</h1>
+        </div>
+        <div class="pics15">
+            <img src="img//strix15p.png" alt="">
+        </div>
+        <div class="desc-s15">
+            <p> The Asus Rog Strix G15 is a great gaming laptop that experts say has amazing gaming performance. They love the large screen size, the powerful graphics card, and the overall design of the laptop. They say it's a great choice for gamers who want a high-end gaming experience..</p>
+        </div>
+    </div>
+
+    <div class="pop" id="pop">
+        <button class="close" id="close" onclick="tutup()">&#935;</button>
+        <div class="pc1">
+            <img src="img//download.png" alt="">
+            <h2>TUF A15</h2>
+            <br>
+            <a href="https://www.asus.com/id/Laptops/For-Gaming/TUF-Gaming/ASUS-TUF-Gaming-A15-2022/" target="_blank">Beli</a>
+        </div>
+        <div class="pc2">
+            <img src="img//zhep16.png" alt="">
+            <h2>ZHEPYRUS DUO 16</h2>
+            <br>
+            <a href="https://rog.asus.com/id/laptops/rog-zephyrus/rog-zephyrus-duo-16-2022-series/" target="_blank">Beli</a>
+        </div>
+        <div class="pc3">
+            <img src="img//g14p.png" alt="">
+            <h2>ZHEPYRUS G14</h2>
+            <br>
+            <a href="https://rog.asus.com/id/laptops/rog-zephyrus/rog-zephyrus-g14-series/" target="_blank">Beli</a>
+        </div>
+        <div class="pc4">
+            <img src="img//strix15p.png" alt="">
+            <h2>STRIX 15</h2>
+            <br>
+            <a href="https://rog.asus.com/id/laptops/rog-strix/rog-strix-g15-2022-series/" target="_blank">Beli</a>
+        </div>
+    </div>
+
+    <script>
+        function pop(){
+            document.getElementById("pop").style.display="flex";
+        }
+
+        function tutup(){
+            document.getElementById("pop").style.display="none";
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#right li").hover(function() { 
+                $(this).find("ul").slideToggle("fast"); 
+             });
+        });
+    </script>
+    <script>
+        $(".strix15").fadeOut("500");
+        $(".g14").fadeOut("500");
+        $(".duo16").fadeOut("500");       
+    </script>
+    <script>
+        $(".div4").click(function(){
+            $(".strix15").fadeIn("500");
+            $(".g14").fadeOut("500");
+            $(".duo16").fadeOut("500");
+            $(".tuf15").fadeOut("500");
+        });
+        $(".div3").click(function(){
+            $(".g14").fadeIn("500");
+            $(".strix15").fadeOut("500");
+            $(".tuf15").fadeOut("500");
+            $(".duo16").fadeOut("500"); 
+        });
+        $(".div2").click(function(){
+            $(".duo16").fadeIn("500");
+            $(".strix15").fadeOut("500");
+            $(".g14").fadeOut("500");
+            $(".tuf15").fadeOut("500"); 
+        });
+        $(".div1").click(function(){
+            $(".tuf15").fadeIn("500");
+            $(".strix15").fadeOut("500");
+            $(".g14").fadeOut("500");
+            $(".duo16").fadeOut("500"); 
+        });
+    </script>
+</body>
+</html>
